@@ -1,0 +1,13 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  src: url('../fonts/CTCSplashRounded.otf');
+  font-family: "SplashRounded";
+}
+@font-face {
+  src: url('../fonts/DINPro-Medium.otf');
+  font-family: "DINPro";
+}

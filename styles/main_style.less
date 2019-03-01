@@ -1,0 +1,503 @@
+@import "variables";
+
+header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  height: 64px;
+  width: 100%;
+  margin: auto;
+  .bg_dark;
+
+  #inside_header {
+    width: 980px;
+    height: inherit;
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 10px 150px;
+      height: 100%;
+
+      li {
+        display: inline-block;
+        height: inherit;
+        margin: 0 10px;
+        flex-grow: 1;
+
+        a {
+          display: block;
+          width: inherit;
+          height: inherit;
+          text-align: center;
+          font-size: 15px;
+          line-height: 3rem;
+          font-family: @MainFontFamily;
+          text-transform: uppercase;
+          .color_bright;
+
+          &:hover {
+            .color_bright_hover;
+            transition: color 0.4s ease 0s;
+          }
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  position: relative;
+  width: 138px;
+  height: 138px;
+  margin: auto;
+  box-sizing: border-box;
+  border: solid @Color_bright 3px;
+  border-radius: 50%;
+
+  > .line_box {
+
+    .l_r {
+      position: absolute;
+      height: 3px;
+      width: 32px;
+      background: @Color_bright;
+
+      &:first-child {
+        top: 50%;
+        left: 10px;
+      }
+
+      &:last-child {
+        top: 50%;
+        right: 10px;
+      }
+    }
+
+  }
+
+  .repair_logo{
+    width: 100%;
+    height: 100%;
+    background: url("../images/logo.svg") no-repeat center;
+    background-size: 80%;
+  }
+}
+
+h1, h2, h3 {
+  .color_bright;
+  font-family: @TextFontFamily;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.line {
+  height: 3px;
+  width: 36px;
+  margin: 0 auto 60px;
+}
+
+h1 {
+  font-size: 68px;
+  font-weight: bolder;
+  margin: 0 auto 10px;
+
+
+  a {
+    .color_bright;
+  }
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  width: 100%;
+  background: @Color_bright;
+
+  #background {
+    position: absolute;
+    width: 100%;
+
+    #bg_main {
+      background: url("../images/main_header.jpg") no-repeat fixed center 10%;
+      background-size: cover;
+      width: 100%;
+      height: 1000px;
+    }
+    #bg_services {
+      background: url("../images/bg_services.webp");
+      background-size: cover;
+      width: 100%;
+      min-height: 700px;
+    }
+
+  }
+
+  #inside_container {
+
+    #main {
+      position: relative;
+      box-sizing: border-box;
+      width: 860px;
+      height: 1000px;
+      margin: auto;
+      padding: 110px 100px 30px;
+
+      em {
+        display: block;
+        width: 100%;
+        font-family: @TextFontFamily;
+        .color_bright;
+        font-style: normal;
+        font-size: 21px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 8px;
+      }
+
+      .social {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        right: 0;
+        bottom: 0;
+        margin: 50px auto;
+
+        a {
+          margin: 0 5px;
+          display: inline-block;
+          color: transparent;
+          -webkit-text-stroke: 1px @Color_bright;
+          text-stroke: 1px @Color_bright;
+          text-shadow: 0 0 20px @Color_bright;
+          font-size: 38px;
+
+          &:hover {
+            text-shadow: 0 0 20px darken(@Color_bright, 30%);
+          }
+        }
+      }
+    }
+
+    #services {
+      box-sizing: border-box;
+      width: 860px;
+      margin: 0 auto 50px;
+      padding: 110px 50px 30px;
+      position: relative;
+
+      .line {
+        background: @Color_bright;
+      }
+
+      .three_line {
+        display: flex;
+        justify-content: space-between;
+
+        .skills {
+          box-sizing: border-box;
+          padding: 0 10px;
+          width: 33%;
+          display: inline-block;
+
+          .skills_logo {
+            position: relative;
+            display: flex;
+            width: 125px;
+            height: 125px;
+            margin: auto;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: solid 3px @Color_bright;
+
+            img {
+              margin: auto;
+              width: 65%;
+
+            }
+          }
+
+          > p {
+            font-family: @MainFontFamily;
+            .color_bright;
+            text-align: center;
+            font-size: 17px;
+            font-weight: 100;
+            letter-spacing: 2px;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    #work {
+      width: 100%;
+      padding: 50px 0 30px;
+
+      .line {
+        .bg_dark;
+      }
+
+      h2 {
+        .color_dark;
+      }
+
+      p {
+        font-family: @MainFontFamily;
+        .color_dark;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 100;
+        letter-spacing: 2px;
+        line-height: 24px;
+        margin: -40px 0 0 0;
+      }
+
+      .min_img_box {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        margin: 50px 0 100px 0;
+
+        .min_img {
+          position: relative;
+          width: calc(100% / 3);
+          box-sizing: border-box;
+          line-height: 0;
+
+          img {
+            width: 100%;
+            transition: filter 1s ease-out;
+
+            &:hover {
+              cursor: pointer;
+              filter: grayscale(100%) sepia(100%);
+            }
+          }
+        }
+      }
+    }
+
+    #about_us {
+      background: url("../images/bg_about.webp");
+      box-sizing: border-box;
+      padding: 100px 0;
+
+      .description_us {
+        background: @Color_bright;
+        width: 661px;
+        margin: auto;
+        box-sizing: border-box;
+        padding: 60px 100px;
+
+        .line {
+          .bg_dark;
+        }
+
+        h2 {
+          .color_dark;
+        }
+
+        p {
+          font-family: @MainFontFamily;
+          .color_dark;
+          text-align: center;
+          font-size: 16px;
+          font-weight: 100;
+          letter-spacing: 2px;
+          line-height: 24px;
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    .fon_line {
+      background: url("../images/fon_line.webp") no-repeat fixed center 50%;
+      background-size: cover;
+      height: 500px;
+      width: 100%;
+    }
+
+    #contact_us {
+      background: url("../images/bg_about.webp");
+      padding: 70px 0;
+
+
+      #form_us_img {
+        background: url("../images/contact.png") no-repeat center top;
+        padding-top: 230px;
+
+        #form_us {
+          height: 500px;
+          width: 661px;
+          margin: auto;
+          background: @Color_bright;
+          box-sizing: border-box;
+          padding: 30px;
+
+          .line {
+            .bg_dark;
+          }
+
+          h2 {
+            .color_dark;
+          }
+
+          .media {
+            width: 100%;
+
+            > div, form {
+              width: 49%;
+            }
+
+            .left {
+              float: left;
+              padding-left: 40px;
+              box-sizing: border-box;
+
+              p, a {
+                font-family: @TextFontFamily;
+                .color_dark;
+                text-align: left;
+                font-size: 17px;
+                font-weight: 100;
+                letter-spacing: 1px;
+                line-height: 24px;
+                margin: 0 0 20px;
+              }
+
+              a {
+                display: inline-block;
+              }
+            }
+
+            .right {
+              float: right;
+              padding-right: 40px;
+              box-sizing: border-box;
+            }
+
+            form {
+
+              input[type="text"], input[type="email"] {
+                width: 100%;
+                height: 28px;
+                padding: 5px;
+                box-sizing: border-box;
+                margin-bottom: 5px;
+                font-family: @TextFontFamily;
+                .color_dark;
+                text-align: left;
+                font-size: 15px;
+                font-weight: 100;
+                letter-spacing: 1px;
+                line-height: 24px;
+              }
+
+              textarea {
+                width: 100%;
+                height: 128px;
+                padding: 5px;
+                box-sizing: border-box;
+                margin-bottom: 5px;
+                resize: none;
+                font-family: @TextFontFamily;
+                .color_dark;
+                text-align: left;
+                font-size: 15px;
+                font-weight: 100;
+                letter-spacing: 1px;
+                line-height: 24px;
+              }
+
+              input[type="submit"] {
+                width: 40%;
+                height: 32px;
+                padding: 5px;
+                box-sizing: border-box;
+                display: block;
+                margin: 0 0 0 auto;
+                font-family: @TextFontFamily;
+                .color_bright;
+                text-align: center;
+                font-size: 15px;
+                font-weight: 100;
+                letter-spacing: 1px;
+                line-height: 24px;
+                .bg_dark();
+                outline: none;
+                border: none;
+                transition: 1s;
+
+                &:hover {
+                  .color_bright_hover ();
+                  box-shadow: inset 0 0 10px #b0aaa9;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main_footer {
+    .bg_dark();
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px;
+
+    .social {
+      width: 100%;
+      text-align: center;
+      right: 0;
+      bottom: 0;
+      margin: 25px auto;
+
+      a {
+        margin: 0 5px;
+        display: inline-block;
+        color: transparent;
+        -webkit-text-stroke: 1px @Color_bright;
+        text-stroke: 1px @Color_bright;
+        text-shadow: 0 0 20px @Color_bright;
+        font-size: 38px;
+
+        &:hover {
+          text-shadow: 0 0 20px darken(@Color_bright, 30%);
+        }
+      }
+    }
+
+    p {
+      font-family: @TextFontFamily;
+      .color_bright();
+      text-align: center;
+      font-size: 17px;
+      font-weight: 100;
+      letter-spacing: 1px;
+      line-height: 24px;
+      margin: 0 0 20px;
+    }
+  }
+}
